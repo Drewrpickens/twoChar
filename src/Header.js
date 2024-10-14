@@ -7,6 +7,7 @@ const Header = ({ setCurrentPage }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleOrderNow = () => {
+    // Replace 'YOUR_DOORDASH_URL' with the actual DoorDash URL for your restaurant
     window.open('YOUR_DOORDASH_URL', '_blank');
   };
 
@@ -22,19 +23,33 @@ const Header = ({ setCurrentPage }) => {
   return (
     <header className={styles.header}>
       <div className={styles.headerContent}>
-        <a href="#" className={styles.logo} onClick={() => handleNavClick('home')}>
+        <button 
+          className={styles.logoButton} 
+          onClick={() => handleNavClick('home')}
+          aria-label="Go to home page"
+        >
           <img src={TwoCharlies} alt="Two Charlies Logo" className={styles.logoImage} />
-        </a>
-        <button className={styles.mobileMenuButton} onClick={toggleMenu}>
+        </button>
+        <button className={styles.mobileMenuButton} onClick={toggleMenu} aria-label="Toggle menu">
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
         <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>
           <ul>
             <li>
-              <a href="#" onClick={() => handleNavClick('menu')} className={styles.navLink}>Menu</a>
+              <button 
+                onClick={() => handleNavClick('menu')} 
+                className={styles.navButton}
+              >
+                Menu
+              </button>
             </li>
             <li>
-              <a href="#" onClick={() => handleNavClick('our-story')} className={styles.navLink}>Our Story</a>
+              <button 
+                onClick={() => handleNavClick('our-story')} 
+                className={styles.navButton}
+              >
+                Our Story
+              </button>
             </li>
             <li>
               <button onClick={handleOrderNow} className={styles.orderButton}>Order Now</button>
