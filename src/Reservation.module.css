@@ -1,0 +1,107 @@
+.reservationContainer {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding: 6rem 1rem 4rem;
+  /* background-image: url('/api/placeholder/1920/1080'); */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.reservationContent {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.reservationHeader {
+  background-color: #2d3748;
+  color: #ffffff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.reservationTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.reservationSubtitle {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.reservationForm {
+  padding: 2rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+.input,
+.select {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  background-color: #ffffff;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus,
+.select:focus {
+  outline: none;
+  border-color: #f6ad55;
+  box-shadow: 0 0 0 3px rgba(246, 173, 85, 0.2);
+}
+
+.submitButton {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #f6ad55;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #ed8936;
+}
+
+.submitButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(246, 173, 85, 0.4);
+}
+
+.successMessage {
+  background-color: #48bb78;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .reservationTitle {
+    font-size: 2rem;
+  }
+}

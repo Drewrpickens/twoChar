@@ -1,0 +1,378 @@
+.hero {
+  position: relative;
+  height: calc(100vh - 80px);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  animation: fadeInDown 1s ease-out;
+  color: #ffffff;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease-out;
+  color: #ffffff;
+}
+
+.heroButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.orderButton,
+.exploreButton {
+  font-size: 1.125rem;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.orderButton {
+  background-color: #48bb78;
+  color: #ffffff;
+}
+
+.orderButton:hover {
+  background-color: #38a169;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(56, 161, 105, 0.4);
+}
+
+.exploreButton {
+  background-color: #48bb78;
+  color: #ffffff;
+}
+
+.exploreButton:hover {
+  background-color: #38a169;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(56, 161, 105, 0.4);
+}
+
+.infoSection {
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  margin-top: -4rem;
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2rem;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+}
+
+.infoIcon {
+  color: #48bb78;
+  margin-right: 1rem;
+}
+
+.infoText h3 {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.infoText p {
+  font-size: 0.875rem;
+  color: #4a5568;
+}
+
+.reserveButton {
+  display: block;
+  width: max-content;
+  margin: 2rem auto 0;
+  background-color: #48bb78;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(56, 161, 105, 0.4);
+}
+
+.reserveButton:hover {
+  background-color: #38a169;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(56, 161, 105, 0.4);
+}
+
+.happyHourSection {
+  background-color: #1a202c;
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.happyHourSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(72, 187, 120, 0.1) 0%, rgba(72, 187, 120, 0.2) 100%);
+  z-index: 1;
+}
+
+.happyHourSection .sectionTitle {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #48bb78;
+  position: relative;
+  z-index: 2;
+}
+
+.happyHourGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.happyHourItem {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.happyHourItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.happyHourDay {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #48bb78;
+  font-weight: bold;
+}
+
+.happyHourSpecial {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.dailyHappyHour {
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  background-color: #48bb78;
+  color: #ffffff;
+  border-radius: 12px;
+  display: inline-block;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dailyHappyHour:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.featuredDishes {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #2d3748;
+}
+
+.dishGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.dishCard {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.dishCard:hover {
+  transform: translateY(-5px);
+}
+
+.dishImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.dishInfo {
+  padding: 1.5rem;
+}
+
+.dishTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+}
+
+.dishDescription {
+  color: #4a5568;
+  font-size: 0.875rem;
+}
+
+.testimonial {
+  background-color: #2d3748;
+  color: #ffffff;
+  padding: 4rem 1rem;
+}
+
+.testimonialContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonialText {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.testimonialAuthor {
+  font-weight: 600;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 3rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.25rem;
+  }
+  
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .happyHourSection {
+    padding: 3rem 1rem;
+  }
+
+  .happyHourSection .sectionTitle {
+    font-size: 2.5rem;
+  }
+
+  .happyHourGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .happyHourItem {
+    padding: 1.25rem;
+  }
+
+  .dailyHappyHour {
+    padding: 1.25rem 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .orderButton,
+  .exploreButton {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .dishGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonialText {
+    font-size: 1.25rem;
+  }
+}
